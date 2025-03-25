@@ -1,0 +1,54 @@
+import java.util.Scanner;
+
+public class clCalculadora
+{
+
+    public static int MostraTelaOperacao()
+    {
+        String Mensagem;
+        Scanner leitor = new Scanner(System.in);
+        
+        Mensagem  = "****************************************\n";
+        Mensagem += "*** S U P E R  C A L C U L A D O R A ***\n";
+        Mensagem += "****************************************\n";
+        Mensagem += "*** Informe a operacao desejada:     ***\n";
+        Mensagem += "****************************************\n";
+        Mensagem += "*** [0] ADICAO                       ***\n";
+        Mensagem += "*** [1] SUBTRACAO                    ***\n";
+        Mensagem += "*** [2] MULTIPLICACAO                ***\n";
+        Mensagem += "*** [3] DIVISAO                      ***\n";
+        Mensagem += "****************************************\n*** : ";
+        
+        System.out.printf(Mensagem);
+        int opcao = leitor.nextInt();
+        
+        return( opcao );
+    
+    }
+    
+    public static float LeOperador(int nroOperando)
+    {
+        String Mensagem;
+        Scanner leitor = new Scanner(System.in);
+        
+        Mensagem = "*** Informe o operador %d: ";
+        System.out.printf(Mensagem, nroOperando);
+        float operador = leitor.nextFloat();
+        
+        return ( operador);
+        
+    }
+    
+    public static void main()
+    {
+        int Operacao, opcao;
+        float Operando1, Operando2;
+        
+        opcao = MostraTelaOperacao();
+        Operando1 = LeOperador(1);
+        Operando2 = LeOperador(2);
+        
+        
+        //System.out.printf("\n Voce selecionou %d\n", opcao);
+    }
+}
