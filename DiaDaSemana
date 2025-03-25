@@ -1,0 +1,26 @@
+
+import java.util.Scanner;
+public class exDiaSemana
+{
+    public static void main()
+    {
+        Scanner leitor = new Scanner(System.in);
+        String DiaPorExtenso = "Voce informou um nro invalido!";
+        
+        System.out.printf("\nInforme um numero entre 1 e 7: ");
+        int Dia = leitor.nextInt();
+        
+        if(Dia == 1) DiaPorExtenso = "Domingo";
+        if(Dia == 2) DiaPorExtenso = "Segunda-Feira";
+        if(Dia == 3) DiaPorExtenso = "Terca-Feira";
+        if(Dia == 4) DiaPorExtenso = "Quarta-Feira";
+        if(Dia == 5) DiaPorExtenso = "Quinta-Feira";
+        if(Dia == 6) DiaPorExtenso = "Sexta-Feira";
+        if(Dia == 7) DiaPorExtenso = "Sabado"; 
+        //if(Dia < 0 || Dia > 7)
+        
+        System.out.printf("%s", DiaPorExtenso);
+        
+    }
+
+    
